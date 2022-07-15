@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from turtle import st
 from lib.shoe import Shoe
 
 import io
