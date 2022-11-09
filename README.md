@@ -53,6 +53,8 @@ In this lab, you will put together everything you've learned so far about Object
 Orientation in Python. You will be building out two classes, a `Book` class and a
 `Shoe` class.
 
+***
+
 ## Instructions
 
 This lab is test-driven. You will write your code in `lib/book.py` and
