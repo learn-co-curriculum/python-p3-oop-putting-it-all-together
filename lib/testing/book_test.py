@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from lib.book import Book
+from book import Book
 
 import io
 import sys
