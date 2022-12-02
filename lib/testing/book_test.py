@@ -24,10 +24,20 @@ class TestBook:
         assert(book.author == "Agatha Christie")
 
     def test_has_page_count(self):
-        '''can be assigned a page count.'''
+        '''can be assigned a page count property.'''
         book = Book("And Then There Were None")
         book.page_count = 272
-        assert(book.page_count == 272)
+        assert book.page_count == 272
+
+    def test_requires_int_page_count(self):
+        '''prints "page_count must be an integer" if page_count is not an integer.'''
+        book = Book("And Then There Were None")
+        captured_out = io.StringIO()
+        sys.stdout = captured_out
+        book.page_count = "not an integer"
+        sys.stdout = sys.__stdout__
+        assert captured_out.getvalue() == "page_count must be an integer\n"
+        assert not book.page_count
 
     def test_has_genre(self):
         '''can be assigned a genre.'''
