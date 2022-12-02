@@ -27,7 +27,17 @@ class TestShoe:
         '''can be assigned a size.'''
         stan_smith = Shoe("Adidas")
         stan_smith.size = 11
-        assert(stan_smith.size == 11)
+        assert stan_smith.size == 11
+
+    def test_requires_int_size(self):
+        '''prints "size must be an integer" if size is not an integer.'''
+        stan_smith = Shoe("Adidas")
+        captured_out = io.StringIO()
+        sys.stdout = captured_out
+        stan_smith.size = "not an integer"
+        sys.stdout = sys.__stdout__
+        # assert captured_out.getvalue() == "size must be an integer\n"
+        assert not stan_smith.size
 
     def test_has_material(self):
         '''can be assigned a material.'''
