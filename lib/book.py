@@ -7,7 +7,6 @@ class Book:
        self.title = title 
        self.page_count = page_count
        
-       
     def get_page_count(self):
         print("getting page count")
         return self._page_count
@@ -18,6 +17,9 @@ class Book:
             self._page_count = page_count
         else:
             print("page_count must be an integer")
+            
+    def turn_page(self):
+        print("Flipping the page...wow, you read fast!")
        
     page_count = property(get_page_count, set_page_count)
     
