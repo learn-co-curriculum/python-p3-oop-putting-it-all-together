@@ -2,7 +2,7 @@
 
 class Shoe:
     
-    def __init__(self, brand, size = 0):
+    def __init__(self, brand, size):
         self.brand = brand
         self.size = size
         
@@ -13,6 +13,10 @@ class Shoe:
         if type(size)  == int:
             self._size = size
         else:
-            print("not an integer")
+            print("size must be an integer")
+            
+    def cobble(self):
+        self.condition = "New"
+        print('Your shoe is as good as new!')
             
     size = property(get_size, set_size)
