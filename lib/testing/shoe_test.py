@@ -8,27 +8,11 @@ import sys
 class TestShoe:
     '''Shoe in shoe.py'''
 
-    # def test_initialize_with_brand(self):
-    #     '''gets initialized with a brand.'''
-    #     Shoe("Adidas")
-
     def test_has_brand_and_size(self):
         '''has the brand and size passed to __init__, and values can be set to new instance.'''
         stan_smith = Shoe("Adidas", 9)
         assert(stan_smith.brand == "Adidas")
         assert(stan_smith.size == 9)
-
-    # def test_has_color(self):
-    #     '''can be assigned a color.'''
-    #     stan_smith = Shoe("Adidas")
-    #     stan_smith.color = "White"
-    #     assert(stan_smith.color == "White")
-
-    # def test_has_size(self):
-    #     '''can be assigned a size.'''
-    #     stan_smith = Shoe("Adidas")
-    #     stan_smith.size = 11
-    #     assert stan_smith.size == 11
 
     def test_requires_int_size(self):
         '''prints "size must be an integer" if size is not an integer.'''
@@ -38,19 +22,6 @@ class TestShoe:
         stan_smith.size = "not an integer"
         sys.stdout = sys.__stdout__
         assert captured_out.getvalue() == "size must be an integer\n"
-        # assert not stan_smith.size
-
-    # def test_has_material(self):
-    #     '''can be assigned a material.'''
-    #     stan_smith = Shoe("Adidas", 9)
-    #     stan_smith.material = "Leather"
-    #     assert(stan_smith.material == "Leather")
-
-    # def test_has_condition(self):
-    #     '''can be assigned a condition.'''
-    #     stan_smith = Shoe("Adidas")
-    #     stan_smith.condition = "Used"
-    #     assert(stan_smith.condition == "Used")
 
     def test_can_cobble(self):
         '''says that the shoe has been repaired.'''
