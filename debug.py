@@ -3,4 +3,5 @@ from lib.book import *
 
 cradle = Book("Cradle", 200)
 
-ipdb.set_trace()
+if __name__ == '__main__':
+    ipdb.set_trace()
